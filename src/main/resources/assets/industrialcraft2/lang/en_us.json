@@ -1,7 +1,11 @@
 {
-  "item.industrialcraft2.tin_ingot": "Tin Ingot",
   "block.industrialcraft2.tin_block": "Tin Block",
+  "block.industrialcraft2.tin_ore": "Tin Ore",
 
-  "creativetab.ic2.items": "Industrial Craft 2 Items",
-  "creativetab.ic2.blocks": "Industrial Craft 2 Blocks"
+  "item.industrialcraft2.tin_ingot": "Tin Ingot",
+  "item.industrialcraft2.tin_raw": "Raw Tin",
+
+  "creativetab.ic2.blocks": "Industrial Craft 2 Blocks",
+  "creativetab.ic2.ores": "Industrial Craft 2 Ores",
+  "creativetab.ic2.items": "Industrial Craft 2 Items"
 }

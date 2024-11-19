@@ -2,11 +2,14 @@ package net.k4510471.ic2.block;
 
 import net.k4510471.ic2.IndustrialCraft2;
 import net.k4510471.ic2.item.ModItems;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -19,6 +22,16 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TIN_BLOCK = registerBlock("tin_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4F,20F)
+                    .sound(SoundType.METAL)
+                    .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<Block> TIN_ORE = registerBlock("tin_ore",
+            () -> new DropExperienceBlock(ConstantInt.of(1),
+                    BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    //.requiresCorrectToolForDrops()
+                    .strength(1F,3f)
                     .sound(SoundType.STONE)
             ));
 
