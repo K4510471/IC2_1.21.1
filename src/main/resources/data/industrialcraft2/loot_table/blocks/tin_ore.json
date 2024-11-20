@@ -1,0 +1,66 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch",
+                          "levels": {
+                            "min": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "name": "industrialcraft2:tin_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 1.0
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 2.0,
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.3
+                    }
+                  ]
+                },
+                {
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops",
+                  "function": "minecraft:apply_bonus"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
+              "name": "industrialcraft2:tin_raw"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "industrialcraft2:blocks/tin_ore"
+}

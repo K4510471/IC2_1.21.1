@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.ic2.ores"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.TIN_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_TIN_ORE);
                     })
                     .build());
 

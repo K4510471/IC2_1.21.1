@@ -21,18 +21,27 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> TIN_BLOCK = registerBlock("tin_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4F,20F)
-                    .sound(SoundType.METAL)
-                    .requiresCorrectToolForDrops()
+                        .strength(4F,20F)
+                        .sound(SoundType.METAL)
+                        .requiresCorrectToolForDrops()
             ));
 
     public static final DeferredBlock<Block> TIN_ORE = registerBlock("tin_ore",
             () -> new DropExperienceBlock(ConstantInt.of(1),
                     BlockBehaviour.Properties.of()
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    //.requiresCorrectToolForDrops()
-                    .strength(1F,3f)
-                    .sound(SoundType.STONE)
+                        .instrument(NoteBlockInstrument.BASEDRUM)
+                        .requiresCorrectToolForDrops()
+                        .strength(3F,3f)
+                        .sound(SoundType.STONE)
+            ));
+
+    public static final DeferredBlock<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore",
+            () -> new DropExperienceBlock(ConstantInt.of(1),
+                    BlockBehaviour.Properties.of()
+                        .instrument(NoteBlockInstrument.BASEDRUM)
+                        .requiresCorrectToolForDrops()
+                        .strength(4.5F,3f)
+                        .sound(SoundType.DEEPSLATE)
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
